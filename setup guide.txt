@@ -5,13 +5,18 @@
 bower
 gulp
 
-
 2. install --save
-
+body-parser
+express
 
 3. install --save-dev
-
-
+gulp
+gulp-pug
+gulp-less
+gulp-typescript
+gulp-util
+gulp-watch
+run-sequence
 
 4. typings
 express
