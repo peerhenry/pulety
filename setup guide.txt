@@ -1,0 +1,21 @@
+
+
+
+1. install globally:
+bower
+gulp
+
+
+2. install --save
+
+
+3. install --save-dev
+
+
+
+4. typings
+express
+express-serve-static-core
+mime
+serve-static
+node
