@@ -1,5 +1,22 @@
 
+=== git ===
 
+make sure git supports long pathnames, if a commit fails due to that, run:
+git config --system core.longpaths true
+
+
+=== run server ===
+either with gulp or by opening cmd in build folder and typing:
+nodemon server.js localhost 3000
+
+
+=== installing type definitions ===
+To install a type definition, enter in console:
+typings install dt~[name] --global --save
+
+
+=== installation list ===
+note that this install list may be incomplete or not up to date with the project. 
 
 1. install globally:
 bower

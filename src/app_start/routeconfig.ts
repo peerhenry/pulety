@@ -2,37 +2,19 @@
 
 import * as express from 'express';
 import * as core from "express-serve-static-core";
+import { Express } from "express-serve-static-core";
+import { Router } from "express-serve-static-core";
+import * as path from 'path';
 
-export function configureRoutes(app: core.Express): void{
-    var router: core.Router = express.Router();
-    // --- configure routings here ---
-    
-    // router.get('/url/to/whatever', function(req, res){
-    //     res.send(someController.responseFunction());
-    // })
+export function configureRoutes(app: Express): void{
 
-    app.use('/', router);
-    console.log('Routings succesfully configured!');
+    let rootPath: string = path.join(__dirname, '../public');
+    app.use( express.static(rootPath) );
+
+    let servePath: string = path.join(__dirname, '../public/views');
+    app.use( express.static(servePath) );
+
+    let dummyRouter: Router = require('../controllers/dummy');
+    app.use('/dummy/', dummyRouter);
+
 }
-
-/*module RouteConfig{
-
-    export function configureRoutes(app: core.Express): void{
-        var router: core.Router = express.Router();
-        // --- configure routings here ---
-        
-        // router.get('/url/to/whatever', function(req, res){
-        //     res.send(someController.responseFunction());
-        // })
-
-        app.use('/', router);
-        console.log('Routings succesfully configured!');
-    }
-}
-
-/*var pipo = express();
-RouteConfig.configureRoutes(pipo);//*/
-
-/*export function configureRoutes(app: core.Express): void{
-    console.log('fucking work!');
-}*/
