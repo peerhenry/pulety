@@ -4,6 +4,10 @@
 make sure git supports long pathnames, if a commit fails due to that, run:
 git config --system core.longpaths true
 
+commands that may help Visual Studio Code to be able publish/push:
+git config --global credential.helper wincred
+git config --global user.name "your name"
+git config --global user.email "your email"
 
 === run server ===
 either with gulp or by opening cmd in build folder and typing:
