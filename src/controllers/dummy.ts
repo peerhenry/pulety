@@ -1,15 +1,9 @@
-/// <reference path='../typings/globals/express/index.d.ts' />
-import { Router } from 'express';
-import { Request } from 'express';
-import { Response } from 'express';
-import * as express from 'express';
-import * as path from 'path';
+var dummyMessage: string = "dummy test response";
 
-let router: Router = Router();
+export function setDummyMessage(message: string){
+  dummyMessage = message;
+}
 
-let servePath: string = path.join(__dirname, '../public/views/dummy');
-router.use( express.static(servePath) );
-
-console.log('controller is using: ' + servePath);
-
-module.exports = router;
+export function getDummyMessage(): string{
+  return dummyMessage;
+}

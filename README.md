@@ -5,7 +5,7 @@ The project uses gulp as task runner. All *.pug, *.less and *.ts files are compi
 
 All the usual commands for a node project are run from the build folder, with one exception:
 Type definitions must installed in the src folder, so commands like 
-`typings install dt~<your-definition> --save`
+`typings install dt~<your-definition> --global --save`
 must be run from within the src folder.
 Git commands should be executed from the root folder.
 

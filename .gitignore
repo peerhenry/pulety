@@ -2,3 +2,5 @@ build/node_modules/*
 build/app_start/*
 build/controllers/*
 build/public/*
+build/test/*
+build/server.js
