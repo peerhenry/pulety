@@ -1,7 +1,7 @@
 {
   "name": "pulety",
   "version": "1.0.0",
-  "description": "",
+  "description": "pug+less+typescript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,6 +23,9 @@
     "gulp-typescript": "^2.13.6",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.6",
+    "karma": "^1.1.0",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.1.1",
     "mocha": "^2.5.3",
     "run-sequence": "^1.2.1"
   },

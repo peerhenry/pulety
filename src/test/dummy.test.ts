@@ -4,8 +4,8 @@
 
 import { Router } from "express-serve-static-core";
 
-import chai = require('chai');
 import dummy = require('../controllers/dummy');
+import chai = require('chai');
 var expect = chai.expect;
 
 describe('my dummy test', () => {

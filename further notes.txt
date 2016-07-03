@@ -1,6 +1,12 @@
 
 === git ===
 
+to contribute:
+- make folder pulety, open vs code and init git repo
+- run: git remote add origin <git-project-url>
+- git pull origin master
+
+
 make sure git supports long pathnames, if a commit fails due to that, run:
 git config --system core.longpaths true
 

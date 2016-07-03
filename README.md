@@ -23,9 +23,13 @@ Don't waste precious time setting up your node development environment. Get star
 ## Setup Guide
 
 1. After cloning or pulling the source, open a command shell in the build folder and run `npm install` to download all package dependencies.
-2. In the build folder, running `gulp` will compile source code from "src" to "build", start the server, start livereload and watch for changes. 
-3. To install client side libraries, use bower.
-4. To install type definitions, run typings from the src folder. At time of writing, definition files are installed by using:  `typings install dt~<your-definition> --global --save`
+2. Run `gulp` from the build folder. This will compile source code from "src" to "build", start the server, start livereload and watch for changes.
+
+## Developing from PuLeTy
+
+- Install typescript definitions from the `src` folder. `typings install dt~<your-definition> --global --save`
+- Run git commands from the root folder. Better yet, use an editor with integrated git support.
+- All other commands (eg. npm install, gulp, bower install) should be run from the `build` folder.
 
 ## Required globally installed packages
 

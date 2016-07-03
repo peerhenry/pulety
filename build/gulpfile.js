@@ -11,6 +11,7 @@ var cache = require('gulp-cached');
 var livereload = require('gulp-livereload');
 var rename = require('gulp-rename');
 var notify = require('gulp-notify');
+var Server = require('karma').Server;
 
 var serverTypescript = ['../src/**/*.ts', '!../src/typings/**', '!../src/public/**', '!../src/**/*.d.ts'];
 
@@ -96,6 +97,13 @@ gulp.task('nodemon', function(){
 gulp.task('livereload-listen', function(){
     livereload.listen();
 });
+
+gulp.task('karma', function(done){
+new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+}, done).start();
+})
 
 gulp.task('watch-server', function(){
     gulp.watch(serverTypescript, ['compile-server']);
