@@ -4,3 +4,4 @@ build/controllers/*
 build/public/*
 build/test/*
 build/server.js
+build/npm-debug.log
