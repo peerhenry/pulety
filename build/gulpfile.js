@@ -78,6 +78,8 @@ gulp.task('compile-server', function(){
     .pipe(gulp.dest('./'));
 });
 
+gulp.task('build', ['compile-server', 'compile-client']);
+
 gulp.task('compile', ['compile-server', 'compile-client']);
 
 gulp.task('nodemon', function(){
