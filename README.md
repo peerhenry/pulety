@@ -13,11 +13,12 @@ Don't waste precious time setting up your node development environment. Get star
 
 ## Stuff included in PuLeTy
 
-- Mocha and Chai for unit testing.
+- Mocha, Chai, Karma and Sinon for unit testing.
+- RequireJS for usage of client-side AMD modules.
 - Gulp for task running, with a pipeline that performs minimal compilation upon saving a file.
 - Gulp-Nodemon for automatic server restarting after server code compilation (client code compilation needs not and will not restart the server).
-- Livereload for automatically refreshing google chrome.
-- A dummy controller, dummy router, dummy view folder, dummy style, dummy script and dummy unit test.
+- Livereload for automatically refreshing Chrome.
+- One dummy for each of the following: controller, router, view folder, style, script, test for the server, test for the client.
 - A .bowerrc file for installing client libraries (like bootstrap or angular) to public/libs.
 
 ## Setup Guide

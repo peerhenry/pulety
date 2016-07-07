@@ -11,12 +11,13 @@ var cache = require('gulp-cached');
 var livereload = require('gulp-livereload');
 var rename = require('gulp-rename');
 var notify = require('gulp-notify');
+var mocha = require('gulp-mocha');
 var Server = require('karma').Server;
 
 var serverTypescript = ['../src/**/*.ts', '!../src/typings/**', '!../src/public/**', '!../src/**/*.d.ts'];
 
 gulp.task('pug', function(){
-    return gulp.src(['../src/public/**/*.pug'])
+    return gulp.src(['../src/public/**/*.pug', '!../src/public/layout.pug'])
     .pipe(cache('pugCache'))
     .pipe(pug({
         // pug options here
@@ -100,12 +101,19 @@ gulp.task('livereload-listen', function(){
     livereload.listen();
 });
 
+gulp.task('test-server', function(){
+    return gulp.src(['./test/**/*.test.js'])
+    .pipe(mocha({reporter: 'nyan'}));
+});
+
 gulp.task('karma', function(done){
 new Server({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
 }, done).start();
-})
+});
+
+gulp.task('test', ['test-server', 'karma']);
 
 gulp.task('watch-server', function(){
     gulp.watch(serverTypescript, ['compile-server']);
@@ -120,5 +128,13 @@ gulp.task('watch-client', function(){
 gulp.task('watch', ['watch-server', 'watch-client']);
 
 gulp.task('default', function(){
-    runSequence('compile', 'livereload-listen', 'nodemon', 'watch');
+    runSequence('compile', 'test', 'livereload-listen', 'nodemon', 'watch');
+});
+
+gulp.task('buildtest', function(){
+    runSequence('build', 'test');
+});
+
+gulp.task('client', function(){
+    runSequence('compile-client', 'karma');
 });

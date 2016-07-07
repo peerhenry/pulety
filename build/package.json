@@ -17,6 +17,7 @@
     "gulp-cssmin": "^0.1.7",
     "gulp-less": "^3.1.0",
     "gulp-livereload": "^3.8.1",
+    "gulp-mocha": "^2.2.0",
     "gulp-nodemon": "^2.1.0",
     "gulp-notify": "^2.2.0",
     "gulp-pug": "^3.0.3",
@@ -24,6 +25,7 @@
     "gulp-typescript": "^2.13.6",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.6",
+    "jasmine-core": "^2.4.1",
     "karma": "^1.1.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^1.0.1",
@@ -31,10 +33,13 @@
     "karma-ie-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-mocha": "^1.1.1",
+    "karma-nyan-reporter": "^0.2.4",
     "karma-requirejs": "^1.0.0",
+    "karma-sinon": "^1.0.5",
     "mocha": "^2.5.3",
     "requirejs": "^2.2.0",
-    "run-sequence": "^1.2.1"
+    "run-sequence": "^1.2.1",
+    "sinon": "^1.17.4"
   },
   "dependencies": {
     "body-parser": "^1.15.2",

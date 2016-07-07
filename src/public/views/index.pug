@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-html(lang="en")
-head
-    meta(charset="UTF-8")
-    title Homepage
+extends ./layout.pug
+
+block styles
     link(rel="stylesheet", href="styles/dummy.min.css")
-body
+
+block content
     h1 This is the homepage
-    a(href="/dummy") link to dummy
+    a(href="/dummy") link to dummy2

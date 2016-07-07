@@ -18,6 +18,10 @@ function setDummyRouting(app: Express){
         res.send(dummy.getDummyMessage());
     })
 
+    dummyRouter.get('/forajax', function(req : Request, res: Response){
+        res.send('This was retrieved through ajax!');
+    })
+
     app.use('/dummy/', dummyRouter);
 }
 

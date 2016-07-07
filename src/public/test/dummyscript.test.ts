@@ -3,7 +3,7 @@
 
 import { setMessage, getMessage } from '../scripts/dummyscript'
 import chai = require('chai');
-var expect = chai.expect;
+var expect: Chai.ExpectStatic = chai.expect;
 
 describe('dummyscript', ()=>{
 

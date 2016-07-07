@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-html(lang="en")
-head
-    meta(charset="UTF-8")
-    title Dummy page
-    script(src='/scripts/dummy.js')
+extends ../layout.pug
+
+block styles
     link(rel="stylesheet", href="/styles/dummy.min.css")
-body
+
+block content
     h1#dummy-header Dummy page
     #container.col
         p Welcome to the PuLeTy project dummy page!
         a(href="/") link to home
+        #ajax-content
+
+block scripts
+    script.
+        requirejs(['dummyscript']);
